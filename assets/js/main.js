@@ -25,7 +25,6 @@ const products = [
   },
 ];
 
-
 const cart = [
   {
     id: "c1",
@@ -65,7 +64,7 @@ const cart = [
     },
     qty: 3,
     total: 45,
-  }
+  },
 ];
 
 const productSearch = function (text, products) {
@@ -91,9 +90,9 @@ const filterProoduct = function (filteredBy) {
   });
 };
 
-const addToCart = function (product, cart) {
+const addToCart = function (product, myCart) {
   const pId = product.id;
-  let newCart = [...cart];
+  let newCart = [...myCart];
   for (let index = 0; index < newCart.length; index++) {
     if (newCart[index].product.id === pId) {
       newCart[index].qty += 1;
@@ -106,11 +105,27 @@ const addToCart = function (product, cart) {
   return newCart;
 };
 
-const totalPrice = function (cart) {
-  return 0;
+const totalPrice = function (myCart) {
+  const newCart = [...myCart];
+  let total = 0;
+  newCart.forEach((element) => {
+    total += element.total;
+  });
+
+  newCart.total = total;
+  return total;
 };
 
-// totalPrice(cart);
+const deleteProductFromCart = (deleteProduct, oldCart) => {
+  const newCart = [...oldCart];
+
+  return newCart.filter((item) => {
+    if (item.product.id !== deleteProduct.id) {
+      console.log(item);
+      return item;
+    }
+  });
+};
 
 module.exports = {
   products,
@@ -120,4 +135,5 @@ module.exports = {
   totalPrice,
   productSearchByPrice,
   cart,
+  deleteProductFromCart,
 };

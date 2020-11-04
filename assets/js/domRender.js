@@ -76,47 +76,47 @@ const products2 = [
   })
 
 
-const cart = [
-  {
-    id: "c1",
-    product: {
-      id: "p3",
-      name: "Toy",
-      imageUrl: "https://via.placeholder.com/150/255595/808080",
-      details: "",
-      price: 5,
-      category: "cat_2",
-    },
-    qty: 2,
-    total: 10,
-  },
-  {
-    id: "c2",
-    product: {
-      id: "p1",
-      name: "T-shirt",
-      imageUrl: "https://via.placeholder.com/150/255595/808080",
-      details: "",
-      price: 25,
-      category: "cat_1",
-    },
-    qty: 2,
-    total: 50,
-  },
-  {
-    id: "c3",
-    product: {
-      id: "p2",
-      name: "Shouse",
-      imageUrl: "https://via.placeholder.com/150/255595/808080",
-      details: "",
-      price: 15,
-      category: "cat_1",
-    },
-    qty: 3,
-    total: 45,
-  }
-];
+// const cart = [
+//   {
+//     id: "c1",
+//     product: {
+//       id: "p3",
+//       name: "Toy",
+//       imageUrl: "https://via.placeholder.com/150/255595/808080",
+//       details: "",
+//       price: 5,
+//       category: "cat_2",
+//     },
+//     qty: 2,
+//     total: 10,
+//   },
+//   {
+//     id: "c2",
+//     product: {
+//       id: "p1",
+//       name: "T-shirt",
+//       imageUrl: "https://via.placeholder.com/150/255595/808080",
+//       details: "",
+//       price: 25,
+//       category: "cat_1",
+//     },
+//     qty: 2,
+//     total: 50,
+//   },
+//   {
+//     id: "c3",
+//     product: {
+//       id: "p2",
+//       name: "Shouse",
+//       imageUrl: "https://via.placeholder.com/150/255595/808080",
+//       details: "",
+//       price: 15,
+//       category: "cat_1",
+//     },
+//     qty: 3,
+//     total: 45,
+//   }
+// ];
 
 cart.forEach(item => {
   const row = document.createElement("tr");
@@ -157,23 +157,7 @@ cart.forEach(item => {
   cartTable.insertAdjacentElement("beforeend", row);
 })
 
-  const totalCartPrice = document.createElement("div");
-  totalCartPrice.textContent = "Total Price: 200$";
-  const totalCartBox = document.getElementById("total-price");
-  totalCartBox.appendChild(totalCartPrice);
-
-  `
-  <tr>
-  <td>
-    <img
-      src="https://via.placeholder.com/50/255595/808080"
-      alt="product"
-    />
-  </td>
-  <td>Product_1</td>
-  <td>12.99$</td>
-  <td>3</td>
-  <td>50$</td>
-  <td><button class="delete-fron-cart">Delete</button></td>
-</tr>
-  `
+const totalCartPrice = document.createElement("div");
+totalCartPrice.textContent = "Total Price: 200$";
+const totalCartBox = document.getElementById("total-price");
+totalCartBox.appendChild(totalCartPrice);
