@@ -10,7 +10,7 @@ const {
 
 describe("Test Buyer functions", () => {
   test("Expect [{}]", () => {
-    expect(productSearch("T-shi", products)).toEqual([
+    expect(productSearch("t-shi", products)).toEqual([
       {
         id: "p1",
         name: "T-shirt",
