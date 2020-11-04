@@ -1,6 +1,4 @@
 
-
-
 const proudectSection = document.createElement("section");
 proudectSection.setAttribute("class","product-section");
 document.body.appendChild(proudectSection);
@@ -8,20 +6,25 @@ document.body.appendChild(proudectSection);
 const productContainer = document.createElement("div");
 productContainer.setAttribute("class" , "container");
 proudectSection.appendChild(productContainer);
+
 const addProductBtn = document.createElement("button");
 addProductBtn.setAttribute("class" , "add-new-product-btn");
 productContainer.appendChild(addProductBtn);
 addProductBtnText = document.createTextNode("Add New Product");
 addProductBtn.appendChild(addProductBtnText);
+
 const productContainerSection = document.createElement("div");
 productContainerSection.setAttribute("class" , "product-container")
 productContainer.appendChild(productContainerSection);
+
 const productItem = document.createElement("div");
 productItem.setAttribute("class" , "product-item");
 productContainerSection.appendChild(productItem);
+
 const productItemHeader = document.createElement("div");
 productItemHeader.setAttribute("class" , "product-item--header")
 productItem.appendChild(productItemHeader);
+
 const productItemImage = document.createElement("img");
 productItemImage.setAttribute("src" , "https://via.placeholder.com/150/955595/808080");
 productItemImage.setAttribute("alt" , "product");
@@ -31,10 +34,12 @@ productItemHeader.appendChild(productItemImage);
 const itemDesc = document.createElement("div");
 itemDesc.setAttribute("class" , "product-item--desc");
 productItem.appendChild(itemDesc);
+
 const itemName = document.createElement("div");
 itemName.setAttribute("class", " product-item--name");
 itemNameHeader = document.createElement("h2");
 itemName.appendChild(itemNameHeader);
+
 const itemNamerHeaderText = document.createTextNode("product-one");
 itemNameHeader.appendChild(itemNamerHeaderText);
 itemDesc.appendChild(itemName);
