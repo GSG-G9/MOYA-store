@@ -7,12 +7,90 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>MOYA Store</title>
   </head>
   <body>
+    <div id="myProduct"></div>
+    <section class="header-section">
+      <div class="container">
+        <div class="navbar-container">
+          <div class="logo-box">
+            <a href="/index.html"
+              ><img
+                src="./assets/images/logo.png"
+                alt="logo"
+                width="50px"
+                height="auto"
+            /></a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Buyer</a></li>
+              <li><a href="seller.html">Seller</a></li>
+              <span class="link-underline"></span>
+            </ul>
+            <div class="cart-link-box">
+              <a class="cart-link" href="">
+                <i class="fas fa-cart-plus"></i>
+                <span class="notification">1</span>
+              </a>
+              <span class="slide"></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="products-section">
+      <div class="container">
+        <div class="srearch-container">
+          <div class="search-box">
+            <input
+              class="search-input"
+              type="search"
+              name="searchByName"
+              id="search"
+              placeholder="Search on product by Name or price"
+            />
+            <button class="search-btn">Search</button>
+          </div>
+          <div class="filter-box">
+            <select
+              class="category-filter-select"
+              name="category-list"
+              id="category"
+            >
+              <option value="cat_1">Category_one</option>
+              <option value="cat_2">Category_two</option>
+              <option value="cat_3">Category_three</option>
+            </select>
+            <button class="filter-btn">Filter</button>
+          </div>
+        </div>
+        <div class="product-container">
+        </div>
+      </div>
+    </section>
+    <div class="cart-item-container" id="cart">
+      <div style="margin: 0 auto;text-align: center; color: rgb(27, 27, 27);">
+        <h2>Cart</h2>
+      </div>
+      <table width="100%" id="cart-table">
+        <tr>
+          <th>Product Image</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Qty.</th>
+          <th>Total</th>
+        </tr>
+      </table>
+      <div class="total-price-box" id="total-price"></div>
+    </div>
     <script
       src="https://kit.fontawesome.com/cea4c25e73.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/domRender.js"></script>
   </body>
 </html>
