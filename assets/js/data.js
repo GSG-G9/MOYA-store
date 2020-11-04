@@ -1,23 +1,32 @@
 const products = [
-    {
-      "id": "1",
-      "Name": "Name 1",
-      "Price": 10,
-      "image": "./url",
-      "date_added": 1496757350
-    },
-    {
-      "id": "2",
-      "Name": "Name 2",
-      "Price": 40,
-      "image": "./url",
-      "date_added": 1496757290
-    },
-    {
-      "id": "10",
-      "Name": "Name 10",
-      "Price": 40,
-      "image": "./url",
-      "date_added": 1496757290
-    }
-  ]
+  {
+    id: "p1",
+    name: "T-shirt",
+    imageUrl: "https://via.placeholder.com/150/255595/808080",
+    details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    price: 25,
+    category: "cat_1",
+  },
+  {
+    id: "p2",
+    name: "Shouse",
+    imageUrl: "https://via.placeholder.com/150/255595/808080",
+    details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    price: 15,
+    category: "cat_2",
+  },
+  {
+    id: "p3",
+    name: "Toy",
+    imageUrl: "https://via.placeholder.com/150/255595/808080",
+    details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    price: 5,
+    category: "cat_3",
+
+  },
+];
+
+module.exports={
+ products,
+  
+}
