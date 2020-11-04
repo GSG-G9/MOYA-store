@@ -26,15 +26,26 @@ const products = [
 ];
 
 const productSearch = function (text, products) {
- return [];
+  const textSearch = text;
+  const productsArr = [...products];
+  return productsArr.filter((item) => {
+    return item.name === textSearch;
+  });
 };
 
 const productSearchByPrice = function (text, products) {
-  return []
+  const textSearch = text;
+  const productsArr = [...products];
+  return productsArr.filter((item) => {
+    return item.price === textSearch;
+  });
 };
 
 const filterProoduct = function (filteredBy) {
-  return [];
+  const text = filteredBy;
+  return products.filter((item) => {
+    return item.category === text;
+  });
 };
 
 const addToCart = function (product, cart) {
