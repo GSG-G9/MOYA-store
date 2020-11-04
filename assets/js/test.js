@@ -7,6 +7,7 @@ const {
   productSearchByPrice,
   deleteProductFromCart,
 } = require("./main.js");
+  
 
 describe("Test Buyer functions", () => {
   test("Expect [{}]", () => {
