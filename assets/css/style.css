@@ -372,8 +372,13 @@ ul li:hover ul li a {
 /*-------------------------------*/
 /* Cart Style */
 .cart-item-container {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 480px);
   width: 960px;
-  background-color: #959595;
+  min-height: 400px;
+  background-color: #ffffff;
   margin: 0 auto;
   padding: 3rem 1rem;
   align-items: center;
@@ -407,4 +412,19 @@ ul li:hover ul li a {
   background-color: rgb(139, 6, 6);
   border: none;
   cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.close-cart {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  font-size: 26px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  margin-left: auto;
 }
