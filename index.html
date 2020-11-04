@@ -60,6 +60,7 @@
               name="category-list"
               id="category"
             >
+              <option value="">...</option>
               <option value="cat_1">Category_one</option>
               <option value="cat_2">Category_two</option>
               <option value="cat_3">Category_three</option>
@@ -67,22 +68,25 @@
             <button class="filter-btn">Filter</button>
           </div>
         </div>
-        <div class="product-container">
-        </div>
+        <div class="product-container"></div>
       </div>
     </section>
     <div class="cart-item-container" id="cart">
-      <div style="margin: 0 auto;text-align: center; color: rgb(27, 27, 27);">
+      <div class="close-cart"><i class="fas fa-times"></i></div>
+      <div style="margin: 0 auto; text-align: center; color: rgb(27, 27, 27)">
         <h2>Cart</h2>
       </div>
       <table width="100%" id="cart-table">
-        <tr>
-          <th>Product Image</th>
-          <th>Product Name</th>
-          <th>Product Price</th>
-          <th>Product Qty.</th>
-          <th>Total</th>
-        </tr>
+        <tbody class="table-header">
+          <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Qty.</th>
+            <th>Total</th>
+          </tr>
+        </tbody>
+        <tbody id="table-content"></tbody>
       </table>
       <div class="total-price-box" id="total-price"></div>
     </div>
