@@ -26,10 +26,10 @@ const products = [
 ];
 
 const productSearch = function (text, products) {
-  const textSearch = text;
+  const textSearch = text.trim();
   const productsArr = [...products];
   return productsArr.filter((item) => {
-    return item.name === textSearch;
+    return item.name.toLowerCase().includes(textSearch.toLowerCase());
   });
 };
 
