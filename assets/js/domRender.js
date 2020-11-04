@@ -1,3 +1,4 @@
+// for buyer 
 const products2 = [
     {
       id: "p1",
@@ -72,7 +73,7 @@ const products2 = [
       productItem.appendChild(productItemDescDiv);
       productItem.appendChild(productItemBtnDiv);
 
-      productContainer.appendChild(productItem)
+      productContainer.appendChild(productItem);
   })
 
 
@@ -177,3 +178,4 @@ cart.forEach(item => {
   <td><button class="delete-fron-cart">Delete</button></td>
 </tr>
   `
+
