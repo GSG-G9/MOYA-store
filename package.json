@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GSG-G9/MOYA-store/issues"
   },
-  "homepage": "https://github.com/GSG-G9/MOYA-store#readme"
+  "homepage": "https://github.com/GSG-G9/MOYA-store#readme",
+  "devDependencies": {
+    "jest": "^26.6.2"
+  }
 }
