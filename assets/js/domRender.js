@@ -7,6 +7,13 @@ let cartShowLink = document.getElementsByClassName("cart-link-box")[0];
 let cartTableContainer = document.getElementsByClassName("cart-item-container")[0]
 let closeCart = document.getElementsByClassName("close-cart")[0];
 let searchInput = document.getElementById("search");
+let categoryEl = document.getElementById("category");
+
+categoryEl.addEventListener("change", e => {
+  console.log(e.target.value);
+  const productFiltered = filterProoduct(e.target.value);
+  showProductItem(productFiltered);
+})
 
 // Search Function -- Search on Product By name
 searchInput.addEventListener("input", e => {
@@ -96,6 +103,12 @@ const showProductItem = (products) => {
 const showCartItem = () => {
   tableContent.innerHTML = "";
   let cart = JSON.parse(localStorage.getItem("cart"));
+  if(cart.length === 0) {
+    const noItemDiv = document.createElement("div");
+    noItemDiv.textContent = "No Items";
+    noItemDiv.setAttribute("style", "margin: 20px auto; width: 100%")
+    return tableContent.appendChild(noItemDiv);
+  }
   cart.forEach((item) => {
     const row = document.createElement("tr");
 
@@ -145,7 +158,7 @@ const showCartItem = () => {
     cartTable.appendChild(tableContent);
   });
   const totalCartPrice = document.createElement("div");
-  totalCartPrice.textContent = "Total Price: " + totalPrice() + "$";
+  totalCartPrice.textContent = "Total Price: " + totalPrice() || 0 + "$";
   totalCartBox = document.getElementById("total-price");
   totalCartBox.innerHTML = totalCartPrice.textContent;
 };

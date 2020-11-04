@@ -67,7 +67,7 @@
 //   },
 // ];
 
-// if (!JSON.parse(localStorage.getItem("products"))) {
+if (!JSON.parse(localStorage.getItem("products"))) {
   localStorage.setItem(
     "products",
     JSON.stringify([
@@ -97,7 +97,7 @@
       },
     ])
   );
-// }
+}
 
 const products = JSON.parse(localStorage.getItem("products")) || [];
 
@@ -124,9 +124,10 @@ const productSearchByPrice = function (text, products) {
 };
 
 const filterProoduct = function (filteredBy) {
-  const text = filteredBy;
-  return products.filter((item) => {
-    return item.category === text;
+  const text = filteredBy.trim();
+  let productsArr = JSON.parse(localStorage.getItem("products"));
+  return productsArr.filter((item) => {
+    return item.category.includes(text);
   });
 };
 
@@ -142,7 +143,7 @@ const addToCart = function (product) {
     }
   }
   newCart.push({
-    id: "c-" + Math.floor(Math.random() * 1000),
+    id: "c-" + Math.floor(Math.random() * 1000) + new Date().getTime().toString(16),
     qty: 1,
     total: product.price,
     product,
@@ -152,14 +153,14 @@ const addToCart = function (product) {
 
 const totalPrice = function () {
   const newCart = JSON.parse(localStorage.getItem("cart"));
-  if (newCart.length === 0) return 0;
   let total = 0;
+  if (newCart.length === 0) return total;
   newCart.forEach((element) => {
     total += element.total;
   });
 
   newCart.total = total;
-  return total;
+  return newCart.total;
 };
 
 const deleteProductFromCart = (productToDelete) => {
@@ -173,13 +174,56 @@ const deleteProductFromCart = (productToDelete) => {
   localStorage.setItem("cart", JSON.stringify(arrFiltered));
 };
 
-module.exports = {
-  products,
-  productSearch,
-  filterProoduct,
-  addToCart,
-  totalPrice,
-  productSearchByPrice,
-  cart,
-  deleteProductFromCart,
-};
+// const cartToTest = [
+//   {
+//     id: "c-208",
+//     product: {
+//       category: "cat_2",
+//       details: "",
+//       id: "p3",
+//       imageUrl: "https://via.placeholder.com/150/255595/808080",
+//       name: "Toy",
+//       price: 5,
+//     },
+//     qty: 1,
+//     total: 5,
+//   },
+//   {
+//     id: "c-413",
+//     product: {
+//       id: "p2",
+//       name: "Shouse",
+//       imageUrl: "https://via.placeholder.com/150/255595/808080",
+//       details: "",
+//       category: "cat_1",
+//       price: 15,
+//     },
+//     qty: 1,
+//     total: 15,
+//   },
+//   {
+//     id: "c-85",
+//     product: {
+//       id: "p1",
+//       name: "T-shirt",
+//       imageUrl: "https://via.placeholder.com/150/255595/808080",
+//       details: "",
+//       category: "cat_1",
+//       price: 25,
+//     },
+//     qty: 1,
+//     total: 25,
+//   },
+// ];
+
+if (global !== undefined) {
+  module.exports = {
+    products,
+    productSearch,
+    filterProoduct,
+    addToCart,
+    totalPrice,
+    productSearchByPrice,
+    deleteProductFromCart
+  };
+}
