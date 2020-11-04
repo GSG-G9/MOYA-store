@@ -11,6 +11,7 @@
     <title>MOYA Store</title>
   </head>
   <body>
+    <div id="myProduct"></div>
     <section class="header-section">
       <div class="container">
         <div class="navbar-container">
@@ -49,7 +50,7 @@
               type="search"
               name="searchByName"
               id="search"
-              placeholder="Search on product by Name"
+              placeholder="Search on product by Name or price"
             />
             <button class="search-btn">Search</button>
           </div>
@@ -67,66 +68,6 @@
           </div>
         </div>
         <div class="product-container">
-          <div class="product-item">
-            <div class="product-item--header">
-              <img
-                src="https://via.placeholder.com/150/955595/808080"
-                alt="product"
-              />
-            </div>
-            <div class="product-item--desc">
-              <div class="product-item--name"><h2>Product_one</h2></div>
-              <div class="product-item--details">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </div>
-              <div class="product-item--pice">
-                <h3 class="product-price">Price: <span>12.99</span>$</h3>
-              </div>
-            </div>
-            <div class="product-item-btn">
-              <button class="add-to-cart-btn">Add To Cart</button>
-            </div>
-          </div>
-          <div class="product-item">
-            <div class="product-item--header">
-              <img
-                src="https://via.placeholder.com/150/955515/808080"
-                alt="product"
-              />
-            </div>
-            <div class="product-item--desc">
-              <div class="product-item--name"><h2>Product_one</h2></div>
-              <div class="product-item--details">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </div>
-              <div class="product-item--pice">
-                <h3 class="product-price">Price: <span>12.99</span>$</h3>
-              </div>
-            </div>
-            <div class="product-item-btn">
-              <button class="add-to-cart-btn">Add To Cart</button>
-            </div>
-          </div>
-          <div class="product-item">
-            <div class="product-item--header">
-              <img
-                src="https://via.placeholder.com/150/255595/808080"
-                alt="product"
-              />
-            </div>
-            <div class="product-item--desc">
-              <div class="product-item--name"><h2>Product_one</h2></div>
-              <div class="product-item--details">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </div>
-              <div class="product-item--pice">
-                <h3 class="product-price">Price: <span>12.99</span>$</h3>
-              </div>
-            </div>
-            <div class="product-item-btn">
-              <button class="add-to-cart-btn">Add To Cart</button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -158,5 +99,7 @@
       src="https://kit.fontawesome.com/cea4c25e73.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/domRender.js"></script>
   </body>
 </html>
