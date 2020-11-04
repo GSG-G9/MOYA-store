@@ -45,7 +45,7 @@ const totalPrice = function (cart) {
   return 0;
 };
 
-totalPrice(cart);
+// totalPrice(cart);
 
 module.exports = {
   products,
@@ -54,5 +54,5 @@ module.exports = {
   addToCart,
   totalPrice,
   productSearchByPrice,
-  cart,
+  // cart,
 };

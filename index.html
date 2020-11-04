@@ -71,8 +71,11 @@
         </div>
       </div>
     </section>
-    <div class="cart-item-container">
-      <table width="100%">
+    <div class="cart-item-container" id="cart">
+      <div style="margin: 0 auto;text-align: center; color: rgb(27, 27, 27);">
+        <h2>Cart</h2>
+      </div>
+      <table width="100%" id="cart-table">
         <tr>
           <th>Product Image</th>
           <th>Product Name</th>
@@ -80,20 +83,8 @@
           <th>Product Qty.</th>
           <th>Total</th>
         </tr>
-        <tr>
-          <td>
-            <img
-              src="https://via.placeholder.com/50/255595/808080"
-              alt="product"
-            />
-          </td>
-          <td>Product_1</td>
-          <td>12.99$</td>
-          <td>3</td>
-          <td>50$</td>
-          <td><button class="delete-fron-cart">Delete</button></td>
-        </tr>
       </table>
+      <div class="total-price-box" id="total-price"></div>
     </div>
     <script
       src="https://kit.fontawesome.com/cea4c25e73.js"
