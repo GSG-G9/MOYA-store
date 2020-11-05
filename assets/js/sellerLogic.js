@@ -1,4 +1,4 @@
-let{products}=require("./data")
+let { products } = require("./data");
 
 filterByName = (array, name) =>
   array.filter((product) => product.name.includes(name));
@@ -16,7 +16,7 @@ addProduct = (productDetails) => {
 
 removeProduct = (id) => products.filter((product) => product.id !== id);
 
-if (global !== undefined) {
+if (typeof module !== "undefined") {
   module.exports = {
     filterByName,
     filterByPrice,

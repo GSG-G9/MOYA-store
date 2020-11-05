@@ -1,72 +1,3 @@
-// const products = [
-//   {
-//     id: "p1",
-//     name: "T-shirt",
-//     imageUrl: "https://via.placeholder.com/150/255595/808080",
-//     details: "",
-//     price: 25,
-//     category: "cat_1",
-//   },
-//   {
-//     id: "p2",
-//     name: "Shouse",
-//     imageUrl: "https://via.placeholder.com/150/255595/808080",
-//     details: "",
-//     price: 15,
-//     category: "cat_1",
-//   },
-//   {
-//     id: "p3",
-//     name: "Toy",
-//     imageUrl: "https://via.placeholder.com/150/255595/808080",
-//     details: "",
-//     price: 5,
-//     category: "cat_2",
-//   },
-// ];
-
-// const cart = [
-//   {
-//     id: "c1",
-//     product: {
-//       id: "p3",
-//       name: "Toy",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       price: 5,
-//       category: "cat_2",
-//     },
-//     qty: 2,
-//     total: 10,
-//   },
-//   {
-//     id: "c2",
-//     product: {
-//       id: "p1",
-//       name: "T-shirt",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       price: 25,
-//       category: "cat_1",
-//     },
-//     qty: 2,
-//     total: 50,
-//   },
-//   {
-//     id: "c3",
-//     product: {
-//       id: "p2",
-//       name: "Shouse",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       price: 15,
-//       category: "cat_1",
-//     },
-//     qty: 3,
-//     total: 45,
-//   },
-// ];
-
 if (!JSON.parse(localStorage.getItem("products"))) {
   localStorage.setItem(
     "products",
@@ -77,7 +8,7 @@ if (!JSON.parse(localStorage.getItem("products"))) {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       },
       {
         id: "p2",
@@ -85,15 +16,39 @@ if (!JSON.parse(localStorage.getItem("products"))) {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 15,
-        category: "cat_1",
+        category: "clothes",
       },
       {
         id: "p3",
-        name: "Toy",
+        name: "Toy_story",
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 5,
-        category: "cat_2",
+        category: "toy",
+      },
+      {
+        id: "p4",
+        name: "Forky",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/I/71s9C50wGkL._AC_SX425_.jpg",
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: 7.99,
+        category: "toy",
+      },
+      {
+        id: "p4",
+        name: "Shrek",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgQood3geX38FFVB1PLXulLdRhMuQ1MbWYdg&usqp=CAU",
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: 6.99,
+        category: "toy",
+      },
+      {
+        id: "p4",
+        name: "Ball",
+        imageUrl: "https://www.sportsdirectoryuk.co.uk/images/contentimages/Web_Feature_handball.jpg",
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: 6.99,
+        category: "sport",
       },
     ])
   );
@@ -174,49 +129,7 @@ const deleteProductFromCart = (productToDelete) => {
   localStorage.setItem("cart", JSON.stringify(arrFiltered));
 };
 
-// const cartToTest = [
-//   {
-//     id: "c-208",
-//     product: {
-//       category: "cat_2",
-//       details: "",
-//       id: "p3",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       name: "Toy",
-//       price: 5,
-//     },
-//     qty: 1,
-//     total: 5,
-//   },
-//   {
-//     id: "c-413",
-//     product: {
-//       id: "p2",
-//       name: "Shouse",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       category: "cat_1",
-//       price: 15,
-//     },
-//     qty: 1,
-//     total: 15,
-//   },
-//   {
-//     id: "c-85",
-//     product: {
-//       id: "p1",
-//       name: "T-shirt",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       category: "cat_1",
-//       price: 25,
-//     },
-//     qty: 1,
-//     total: 25,
-//   },
-// ];
-
-if (global !== undefined) {
+if (typeof module !== 'undefined') {
   module.exports = {
     products,
     productSearch,
