@@ -5,6 +5,7 @@ const {
   addProduct,
   removeProduct,
 } = require("./sellerLogic");
+
 let { products } = require("./data");
 
 test("test proudest by name", function () {
@@ -116,4 +117,3 @@ test("test removeProduct",function () {
     },
   ]);
 });
-console.log(products)

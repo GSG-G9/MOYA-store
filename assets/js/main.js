@@ -1,73 +1,4 @@
-// const products = [
-//   {
-//     id: "p1",
-//     name: "T-shirt",
-//     imageUrl: "https://via.placeholder.com/150/255595/808080",
-//     details: "",
-//     price: 25,
-//     category: "cat_1",
-//   },
-//   {
-//     id: "p2",
-//     name: "Shouse",
-//     imageUrl: "https://via.placeholder.com/150/255595/808080",
-//     details: "",
-//     price: 15,
-//     category: "cat_1",
-//   },
-//   {
-//     id: "p3",
-//     name: "Toy",
-//     imageUrl: "https://via.placeholder.com/150/255595/808080",
-//     details: "",
-//     price: 5,
-//     category: "cat_2",
-//   },
-// ];
-
-// const cart = [
-//   {
-//     id: "c1",
-//     product: {
-//       id: "p3",
-//       name: "Toy",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       price: 5,
-//       category: "cat_2",
-//     },
-//     qty: 2,
-//     total: 10,
-//   },
-//   {
-//     id: "c2",
-//     product: {
-//       id: "p1",
-//       name: "T-shirt",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       price: 25,
-//       category: "cat_1",
-//     },
-//     qty: 2,
-//     total: 50,
-//   },
-//   {
-//     id: "c3",
-//     product: {
-//       id: "p2",
-//       name: "Shouse",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       price: 15,
-//       category: "cat_1",
-//     },
-//     qty: 3,
-//     total: 45,
-//   },
-// ];
-
-// if (!JSON.parse(localStorage.getItem("products"))) {
+if (!JSON.parse(localStorage.getItem("products"))) {
   localStorage.setItem(
     "products",
     JSON.stringify([
@@ -121,7 +52,7 @@
       },
     ])
   );
-// }
+}
 
 const products = JSON.parse(localStorage.getItem("products")) || [];
 
@@ -198,49 +129,7 @@ const deleteProductFromCart = (productToDelete) => {
   localStorage.setItem("cart", JSON.stringify(arrFiltered));
 };
 
-// const cartToTest = [
-//   {
-//     id: "c-208",
-//     product: {
-//       category: "cat_2",
-//       details: "",
-//       id: "p3",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       name: "Toy",
-//       price: 5,
-//     },
-//     qty: 1,
-//     total: 5,
-//   },
-//   {
-//     id: "c-413",
-//     product: {
-//       id: "p2",
-//       name: "Shouse",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       category: "cat_1",
-//       price: 15,
-//     },
-//     qty: 1,
-//     total: 15,
-//   },
-//   {
-//     id: "c-85",
-//     product: {
-//       id: "p1",
-//       name: "T-shirt",
-//       imageUrl: "https://via.placeholder.com/150/255595/808080",
-//       details: "",
-//       category: "cat_1",
-//       price: 25,
-//     },
-//     qty: 1,
-//     total: 25,
-//   },
-// ];
-
-if (global !== undefined) {
+if (typeof module !== 'undefined') {
   module.exports = {
     products,
     productSearch,

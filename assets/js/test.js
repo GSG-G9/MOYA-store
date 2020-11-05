@@ -18,7 +18,7 @@ describe("Test Buyer functions", () => {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       },
     ]);
   });
@@ -31,20 +31,20 @@ describe("Test Buyer functions", () => {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       },
     ]);
   });
 
   test("Expect [{}] when select category-1", () => {
-    expect(filterProoduct("cat_1")).toEqual([
+    expect(filterProoduct("clothes")).toEqual([
       {
         id: "p1",
         name: "T-shirt",
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       },
       {
         id: "p2",
@@ -52,7 +52,7 @@ describe("Test Buyer functions", () => {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 15,
-        category: "cat_1",
+        category: "clothes",
       },
     ]);
   });
@@ -65,7 +65,7 @@ describe("Test Buyer functions", () => {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       })
     ).toEqual([
       {
@@ -76,7 +76,7 @@ describe("Test Buyer functions", () => {
           imageUrl: "https://via.placeholder.com/150/255595/808080",
           details: "",
           price: 5,
-          category: "cat_2",
+          category: "toy",
         },
         qty: 1,
         total: 5,
@@ -89,7 +89,7 @@ describe("Test Buyer functions", () => {
           imageUrl: "https://via.placeholder.com/150/255595/808080",
           details: "",
           price: 25,
-          category: "cat_1",
+          category: "clothes",
         },
         qty: 2,
         total: 50,
@@ -102,7 +102,7 @@ describe("Test Buyer functions", () => {
           imageUrl: "https://via.placeholder.com/150/255595/808080",
           details: "",
           price: 15,
-          category: "cat_1",
+          category: "clothes",
         },
         qty: 1,
         total: 15,
@@ -122,7 +122,7 @@ describe("Test Buyer functions", () => {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       })
     ).toEqual([
       {
@@ -133,7 +133,7 @@ describe("Test Buyer functions", () => {
           imageUrl: "https://via.placeholder.com/150/255595/808080",
           details: "",
           price: 5,
-          category: "cat_2",
+          category: "toy",
         },
         qty: 1,
         total: 5,
@@ -146,7 +146,7 @@ describe("Test Buyer functions", () => {
           imageUrl: "https://via.placeholder.com/150/255595/808080",
           details: "",
           price: 15,
-          category: "cat_1",
+          category: "clothes",
         },
         qty: 1,
         total: 15,

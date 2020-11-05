@@ -1,4 +1,4 @@
-const products = [
+let products = [
   {
     id: "p1",
     name: "T-shirt",
@@ -25,9 +25,9 @@ const products = [
 
   },
 ];
-if (global !== undefined){
+
+if (typeof module !== 'undefined'){
   module.exports={
     products,
-     
    }
 }
