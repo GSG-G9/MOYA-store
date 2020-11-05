@@ -1,57 +1,27 @@
-const { file } = require("@babel/types");
 let{products}=require("./data")
 
+filterByName = (array, name) =>
+  array.filter((product) => product.name.includes(name));
 
-filterByName =(array,name)=>{
-  let arr=[];
-  const trimName=name.trim()
-  array.filter((product)=>{
-    if(product.name.includes(trimName)){
-      arr=[...arr,product]
-    }
-  })
-    return arr
-  }
-  filterByPrice=(array,price)=>{
-    let arr=[];
-    array.filter((product)=>{
-      if(product.price==price){
-        arr=[...arr,product]
-      }
-    })
-      return arr
-    }
-    filterByCategory =(array,category)=>{
-      let arr=[];
-      const trimCategory=category.trim()
-      array.filter((product)=>{
-        if(product.category.includes(trimCategory)){
-          arr=[...arr,product]
-        }
-      })
-        return arr
-      }
-      addProduct=(productDetails)=>{
-       products=[...products,productDetails]
-        return products
-      }
+filterByPrice = (array, price) =>
+  array.filter((product) => product.price == price);
 
-      removeProduct=(id)=>{
-        let newProductArr=[]
-        products.filter((product)=>{
-         if(product.id !==id){
-           newProductArr=[...newProductArr,product]
-         }
-        })
-        return newProductArr
-      }
+filterByCategory = (array, category) =>
+  array.filter((product) => product.category.includes(category));
 
+addProduct = (productDetails) => {
+  products = [...products, productDetails];
+  return products;
+};
 
+removeProduct = (id) => products.filter((product) => product.id !== id);
+
+if (global !== undefined) {
   module.exports = {
-  filterByName,
-  filterByPrice,
-  filterByCategory,
-  addProduct,
-  removeProduct
+    filterByName,
+    filterByPrice,
+    filterByCategory,
+    addProduct,
+    removeProduct,
+  };
 }
-

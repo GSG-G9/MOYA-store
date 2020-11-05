@@ -1,31 +1,4 @@
-const products = [
-    {
-      id: "p1",
-      name: "T-shirt",
-      imageUrl: "https://via.placeholder.com/150/255595/808080",
-      details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-      price: 25,
-      category: "cat_1",
-    },
-    {
-      id: "p2",
-      name: "Shouse",
-      imageUrl: "https://via.placeholder.com/150/255595/808080",
-      details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-      price: 15,
-      category: "cat_2",
-    },
-    {
-      id: "p3",
-      name: "Toy",
-      imageUrl: "https://via.placeholder.com/150/255595/808080",
-      details: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-      price: 5,
-      category: "cat_3",
-    },
-  ];
-  
-  const proudectSection = document.createElement("section");
+const proudectSection = document.createElement("section");
   proudectSection.setAttribute("class", "product-section");
   document.body.appendChild(proudectSection);
   
@@ -100,6 +73,9 @@ const products = [
       productItemBtnOne.appendChild(productItemBtnOneText);
       
       const productItemBtnTwo = document.createElement("button");
+      productItemBtnTwo.addEventListener("click",()=>{
+         products.filter((product) => product.id !== item.id);
+      })
       productItemBtnTwo.setAttribute("class", "remove-btn");
       productItemBtn.appendChild(productItemBtnTwo);
       const productItemBtnTwoText = document.createTextNode("Remove");
