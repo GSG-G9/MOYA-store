@@ -8,6 +8,8 @@ let cartTableContainer = document.getElementsByClassName("cart-item-container")[
 let closeCart = document.getElementsByClassName("close-cart")[0];
 let searchInput = document.getElementById("search");
 let categoryEl = document.getElementById("category");
+let layoutModeGrid = document.querySelector(".layout-mode--grid .fa-th");
+let layoutModeList = document.querySelector(".layout-mode--list .fa-bars")
 
 categoryEl.addEventListener("change", e => {
   console.log(e.target.value);
@@ -33,6 +35,15 @@ cartShowLink.addEventListener("click", e => {
 // Close Cart Table On Click
 closeCart.addEventListener("click", e => {
   cartTableContainer.classList.remove("block");
+})
+
+// Toggle between Grid And List
+layoutModeGrid.addEventListener("click", e => {
+  productContainer.classList.remove("list");
+})
+
+layoutModeList.addEventListener("click", e => {
+  productContainer.classList.add("list");
 })
 
 // Render Product Element On DOM

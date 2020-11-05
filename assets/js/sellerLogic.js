@@ -1,4 +1,3 @@
-const { file } = require("@babel/types");
 let{products}=require("./data")
 
 

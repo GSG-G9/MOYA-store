@@ -67,7 +67,7 @@
 //   },
 // ];
 
-if (!JSON.parse(localStorage.getItem("products"))) {
+// if (!JSON.parse(localStorage.getItem("products"))) {
   localStorage.setItem(
     "products",
     JSON.stringify([
@@ -77,7 +77,7 @@ if (!JSON.parse(localStorage.getItem("products"))) {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 25,
-        category: "cat_1",
+        category: "clothes",
       },
       {
         id: "p2",
@@ -85,19 +85,43 @@ if (!JSON.parse(localStorage.getItem("products"))) {
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 15,
-        category: "cat_1",
+        category: "clothes",
       },
       {
         id: "p3",
-        name: "Toy",
+        name: "Toy_story",
         imageUrl: "https://via.placeholder.com/150/255595/808080",
         details: "",
         price: 5,
-        category: "cat_2",
+        category: "toy",
+      },
+      {
+        id: "p4",
+        name: "Forky",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/I/71s9C50wGkL._AC_SX425_.jpg",
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: 7.99,
+        category: "toy",
+      },
+      {
+        id: "p4",
+        name: "Shrek",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgQood3geX38FFVB1PLXulLdRhMuQ1MbWYdg&usqp=CAU",
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: 6.99,
+        category: "toy",
+      },
+      {
+        id: "p4",
+        name: "Ball",
+        imageUrl: "https://www.sportsdirectoryuk.co.uk/images/contentimages/Web_Feature_handball.jpg",
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        price: 6.99,
+        category: "sport",
       },
     ])
   );
-}
+// }
 
 const products = JSON.parse(localStorage.getItem("products")) || [];
 
