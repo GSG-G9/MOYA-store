@@ -37,7 +37,24 @@
               <span class="slide"></span>
             </div>
           </nav>
-        </div> 
+        </div>
+      <div>
+        <form  onsubmit="addProductFunction()">
+            <label for="name">Product name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="imageUrl">image Url:</label><br>
+            <input type="text" id="imageUrl" name="imageUrl">
+            <label for="details">details:</label><br>
+            <input type="textarea" id="details" name="details">
+            <label for="price">price:</label><br>
+            <input type="text" id="price" name="price">
+            <label for="category">category:</label><br>
+            <input type="text" id="category" name="category">
+            <input type="submit" value="Submit">
+        </form>
+      </div> 
+      </div> 
+
        </div> 
    
     <script
@@ -46,6 +63,6 @@
     ></script>
     <script src="./assets/js/data.js"></script>
     <script src="./assets/js/sellerLogic.js"></script>
-    <script src="assets/js/sellerDom.js"></script>
+    <script src="./assets/js/productFormDom.js"></script>
   </body>
 </html>

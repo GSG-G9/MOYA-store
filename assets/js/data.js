@@ -25,8 +25,9 @@ const products = [
 
   },
 ];
-
-module.exports={
- products,
-  
+if (global !== undefined){
+  module.exports={
+    products,
+     
+   }
 }
