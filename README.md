@@ -29,3 +29,6 @@ On the page, for the seller, he can add, remove the product, and edition product
 | Remove a Cart | &#10004; | Ability of Remove a Cart               |
 | Add Item      | &#10004; | Ability of add a new Item on the Cart  |
 | Remove a Item | &#10004; | Ability of Remove a Item from the Cart |
+
+
+https://gsg-g9.github.io/MOYA-store/index.html
